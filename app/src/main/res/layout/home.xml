@@ -40,23 +40,25 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="80dp">
+                android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/wx_chat"
                     android:layout_width="0dp"
                     android:layout_marginStart="32dp"
                     android:layout_weight="2"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="8dp"
                     cardview:cardCornerRadius="4dp"
                     cardview:cardElevation="4dp">
 
                     <RelativeLayout
                         android:background="@color/colorPGY"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content">
 
                         <ImageView
+                            android:id="@+id/showPic"
                             android:src="@drawable/screenshot"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
@@ -64,6 +66,13 @@
                             android:layout_height="32dp"/>
 
                         <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_below="@+id/showPic"
+                            android:text="微信聊天截图"
+                            android:layout_marginStart="16dp"
+                            android:textColor="@color/colorWhite"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:textSize="17sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
